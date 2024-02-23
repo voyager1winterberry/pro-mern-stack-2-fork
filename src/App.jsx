@@ -5,6 +5,7 @@ const continents = ['Africa','America','Asia','Australia','Europe'];
 const helloContinents = Array.from(continents, c => `Hello ${c}!`);
 const message = helloContinents.join(' ');
 
+// here we change hardcoded message to using the message variable
 const element = (
   <div title="Outer div">
     <h1>{message}</h1>
