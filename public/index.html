@@ -13,7 +13,9 @@ their state manipulation, etc. -->
 DOM that a browser can understand -->
   <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-
+<!--polyfills are that which supplement the missing implementation in older browsers.
+babel transforms only deal with syntactic changes. polyfills are required to add these
+new functions' implementations. babel provides the polyfills.-->
   <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
 </head>
 
