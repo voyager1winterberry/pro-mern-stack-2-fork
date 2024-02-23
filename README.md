@@ -185,5 +185,46 @@ There are no code listings in this chapter.
 There are no code listings in this chapter.
 
 ### Comments
-
 this repo contains my personal notes for each section
+
+## babel compilation
+
+chapter 2 commands, etc.:
+
+installing babel tools:
+```$ npm install --save-dev @babel/core@7 @babel/cli@7```
+check install success:
+```$ node_modules/.bin/babel --version```
+```$npx babel --version```
+install the ```preset-react``` JSX transform preset:
+```npm install --save-dev @babel/preset-react@7```
+transform - output is ```public```, apply the ```@bable/react``` JSX transform:
+```npx babel src --presets @babel/react --out-dir public```
+
+install the ```plugin-transform-arrow-functions``` plugin for transforming newer javascript to older javascript:
+```$ npm install --no-save @babel/plugin-transform-arrow-functions@7```
+transform the source file:
+```$ npx babel src --presets @babel/react --plugins=@babel/plugin-transform-arrow-functions --out-dir public```
+uninstall the ```transform-arrow-function``` preset:
+```$ npm uninstall @babel/plugin-transform-arrow-functions@7```
+install the env preset
+```npm install --save-dev @babel/preset-env@7```
+create a ```.babelrc``` file:
+```
+{
+    "presets": [
+        ["@babel/preset-env", {
+        "targets": {
+            "ie": "11",
+            "edge": "15",
+            "safari": "10",
+            "firefox": "50",
+            "chrome": "49"
+        }
+    }],
+    "@babel/preset-react"
+    ]
+}
+```
+babel command that can be run without specifying any presets in the command line:
+```$ npx babel src --out-dir public```
