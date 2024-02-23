@@ -183,3 +183,7 @@ There are no code listings in this chapter.
 ### Chapter 16: Looking Ahead
 
 There are no code listings in this chapter.
+
+### Comments
+
+this repo contains my personal notes for each section
